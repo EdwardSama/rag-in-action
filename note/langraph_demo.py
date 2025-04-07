@@ -21,7 +21,8 @@ all_splits = text_splitter.split_documents(docs)
 # 3. 设置嵌入模型
 from langchain_huggingface import HuggingFaceEmbeddings
 embeddings = HuggingFaceEmbeddings(
-    model_name="./model_caches/bge-small-zh-v1.5",
+    # model_name="./model_caches/bge-small-zh-v1.5",
+    model_name="BAAI/bge-small-zh-v1.5",
     model_kwargs={'device': 'cpu'},
     encode_kwargs={'normalize_embeddings': True}
 )

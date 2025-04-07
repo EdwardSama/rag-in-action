@@ -1,8 +1,8 @@
 # 1. 加载文档
 import os
 from dotenv import load_dotenv
-import socks # 安装pysocks
-import socket
+# import socks # 安装pysocks
+# import socket
 
 # # 保存原始socket对象
 # original_socket = socket.socket
@@ -33,7 +33,8 @@ all_splits = text_splitter.split_documents(docs)
 from langchain_huggingface import HuggingFaceEmbeddings # pip install langchain-huggingface
 
 embeddings = HuggingFaceEmbeddings(
-    model_name="./model_caches/bge-small-zh-v1.5",
+    # model_name="./model_caches/bge-small-zh-v1.5",
+    model_name="BAAI/bge-small-zh-v1.5",
     model_kwargs={'device': 'cpu'},
     encode_kwargs={'normalize_embeddings': True}
 )

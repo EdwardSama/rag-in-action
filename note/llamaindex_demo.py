@@ -1,5 +1,5 @@
-import socks # 安装pysocks
-import socket
+# import socks # 安装pysocks
+# import socket
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.deepseek import DeepSeek
@@ -10,14 +10,15 @@ import os
 # load_dotenv('./note/.env')
 print(f"环境变量设置{load_dotenv()}")
 
-# 保存原始socket对象
+# # 保存原始socket对象
 # original_socket = socket.socket
 # # 设置代理时替换socket
 # socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 1080)
 # socket.socket = socks.socksocket  # ‌:ml-citation{ref="2" data="citationList"}
 
 # 加载本地嵌入模型
-embed_model = HuggingFaceEmbedding(model_name="./model_caches/bge-small-zh")
+# embed_model = HuggingFaceEmbedding(model_name="./model_caches/bge-small-zh")
+embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-zh") # 镜像源可能没有该模型
 
 # 取消代理时恢复原始socket
 # socket.socket = original_socket
