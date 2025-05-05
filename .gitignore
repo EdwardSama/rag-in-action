@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+*.db
+*.pth
 .Python
 build/
 develop-eggs/
@@ -20,13 +22,15 @@ wheels/
 .installed.cfg
 *.egg
 
+*archive/*
+
 # Virtual Environment
 venv/
 env/
 ENV/
 .env
 .venv
-
+**/venv-rag-langchain*/
 # IDE
 .idea/
 .vscode/
@@ -68,5 +72,6 @@ data/
 **/data
 
 **/99-其它*/
-
+**/RAG_LangChain*/
+**/RAG_LlamaIndex*/
 
