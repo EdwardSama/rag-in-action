@@ -1,5 +1,15 @@
 from dotenv import load_dotenv
-print(f"环境变量设置{load_dotenv()}")
+# print(f"环境变量设置{load_dotenv()}")
+
+# import nltk
+# # 下载常用的 tokenizer 模块
+# nltk.download('punkt')
+# #下载词性标注器
+# nltk.download('averaged_perceptron_tagger')
+# # 下载 WordNet 词典
+# nltk.download('wordnet')
+# #下载停用词表
+# nltk.download('stopwords')
 
 file_path = ("90-文档-Data/山西文旅/云冈石窟-en.pdf")
 from langchain_unstructured import UnstructuredLoader
